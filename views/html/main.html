@@ -4,14 +4,51 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <meta content="text/html" charset="UTF-8">
     <title>TASTY</title>
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- BUNDLE CSS -->
     <link rel="stylesheet" type="text/css" href="../css/main.css">
     <link rel="stylesheet" type="text/css" href="../css/wrapper.css">
+    <link rel="stylesheet" type="text/css" href="../css/auth.css">
 </head>
 <body>
 <noscript> Ви маєте підключити JavaScript для запуску цього сайту </noscript>
 <div class="main">
     <div class="header">
+    </div>
+    <!-- AUTH -->
+    <div class="auth">
+        <div class="auth_container">
+            <h1>Вітаємо вас</h1>
+            <img 
+                src="../assets/auth/auth.svg" 
+                alt="auth"
+            >
+            <div class="auth_container_topbar">
+                <div class="active-item">
+                    <p>Вхід</p>
+                </div>
+                <div class="item">
+                    <p>Реєстрація</p>
+                </div>
+            </div>
+            <div class="auth_container_body">
+                <input
+                    placeholder="Логін" 
+                    type="text"
+                >
+                <div class="input">
+                    <input
+                        placeholder="Пароль" 
+                        type="password"
+                    >
+                </div>
+                <button class="submit">
+                    Ввійти
+                </button>
+            </div>
+        </div>
     </div>
 </div>
 </body>
