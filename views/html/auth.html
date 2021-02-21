@@ -26,16 +26,39 @@
                 alt="auth"
             >
             <div class="auth_container_topbar">
-                <div class="active-item">
+                <div 
+                    class="active-item"
+                    onclick="onChangeMode('login')"
+                    id="login-label"
+                >
                     <p>Вхід</p>
                 </div>
-                <div class="item">
+                <div 
+                    class="item"
+                    onclick="onChangeMode('signup')"
+                    id="signup-label"
+                >
                     <p>Реєстрація</p>
                 </div>
             </div>
-            <div class="auth_container_body">
+            <div class="auth_container_body" id="login">
                 <input
-                    placeholder="Логін" 
+                    placeholder="Email" 
+                    type="text"
+                >
+                <div class="input">
+                    <input
+                        placeholder="Пароль" 
+                        type="password"
+                    >
+                </div>
+                <button class="submit">
+                    Ввійти
+                </button>
+            </div>
+            <div class="auth_container_body" id="signup">
+                <input
+                    placeholder="Реєстрація" 
                     type="text"
                 >
                 <div class="input">
@@ -51,5 +74,8 @@
         </div>
     </div>
 </div>
+    <!-- JS -->
+    <script src="../js/auth.js">
+    </script>
 </body>
 </html>
