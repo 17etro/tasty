@@ -1,0 +1,120 @@
+.auth {
+	width: 600px;
+	height: 100%;
+	background-color: #fff;
+	display: flex;
+	justify-content: center;
+	padding: 80px 5px 5px 5px;
+	margin: 3% auto;
+	overflow: hidden;
+}
+.auth_container {
+	width: 600px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.auth_container h1 {
+	text-align: center;
+	font-size: 45px;
+}
+.auth_container img {
+	height: 70px;
+	margin-top: 20px;
+}
+.auth_container_topbar {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	cursor: pointer;
+	margin-top: 50px;
+}
+.auth_container_topbar .item {
+	width: 50%;
+	border-bottom: 4px solid #eee;
+	color: #aaa;
+	padding: 10px;
+}
+.auth_container_topbar .item:hover {
+	background-color: rgb(236, 236, 236);
+}
+.auth_container_topbar .active-item {
+	width: 50%;
+	color: #870006;
+	border-bottom: 4px solid #870006;
+	background-color: #f8edc2;
+	padding: 10px;
+}
+.auth_container_topbar .item p,
+.auth_container_topbar .active-item p {
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+}
+.auth_container_body {
+	transition: 0.5s;
+	position: relative;
+	height: 100%;
+	width: 550px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.auth_container_body .input {
+	width: 100%;
+	position: relative;
+}
+.auth_container_body .input .eye {
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	right: 20px;
+	top: calc(50% - 5px);
+	cursor: pointer;
+}
+
+.auth_container_body .input .eye img {
+	width: 25px;
+	height: 25px;
+	margin-top: 0px;
+}
+
+.auth_container_body input {
+	width: 100%;
+	margin-top: 30px;
+	padding: 5px 10px;
+	border: none;
+	border-bottom: 3px solid #eee;
+	font-size: 20px;
+	font-weight: 500;
+	color: #555555;
+	line-height: 1.2;
+	transition: border-bottom 0.4s linear;
+}
+
+.auth_container_body input:focus {
+	border-bottom: 3px solid #870006;
+}
+
+.auth_container_body .submit {
+	width: 100%;
+	margin-top: 30px;
+	background-color: #aa484f;
+	border: none;
+	border-radius: 3px;
+	text-align: center;
+	padding: 15px 0;
+	color: #fff;
+	font-size: 20px;
+	cursor: pointer;
+	transition: background-color, border-radius 0.2s linear;
+}
+.auth_container_body .submit:hover {
+	background-color: #870006;
+	border-radius: 20px;
+}
+#register {
+	left: 650px;
+	top: -498px;
+}
