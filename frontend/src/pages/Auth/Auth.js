@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import axios from 'axios';
+import { backendUrl } from '../../config/config';
 
 import './Auth.scss';
 
@@ -55,14 +57,29 @@ const Auth = (props) => {
     }
 
     const onLogIn = () => {
-        // request
+        console.log(1);
+        axios.post(backendUrl + '/login', {
+            name: 'Petro'
+        })
+        .then(res => {
+            console.log(res);
+        })
+        .catch(err => {
+            console.log(err, err.response);
+        });
     };
 
     const onSignUp = () => {
-        // request
+        axios.post(backendUrl + '/signup', {
+            name: 'Petro'
+        })
+        .then(res => {
+            console.log(res);
+        })
+        .catch(err => {
+            console.log(err, err.response);
+        });
     };
-
-    console.log(signUpData);
 
     return (
         <div className="auth">
