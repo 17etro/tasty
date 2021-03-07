@@ -1,5 +1,7 @@
+    DROP DATABASE IF EXISTS tasty;
     CREATE  DATABASE tasty;
 
+    DROP TABLE IF EXISTS user;
     CREATE TABLE user (
         id SERIAL PRIMARY KEY,
         name VARCHAR(255),
@@ -8,9 +10,11 @@
         password VARCHAR(255)
     )
 
+    DROP TABLE IF EXISTS recipes;
     CREATE TABLE recipes (
         id SERIAL PRIMARY KEY,
-        user_id INTEGER REFERENCES user(id),
+        user_id INTEGER,
+        FOREIGN KEY (user_id) REFERENCES user(id),
         photo_url VARCHAR,
         rating NUMERIC(3, 2),
         category VARCHAR(255),
@@ -18,16 +22,21 @@
         steps TEXT
     )
 
+    DROP TABLE IF EXISTS comments;
     CREATE TABLE comments(
         id SERIAL PRIMARY KEY,
         user_id INTEGER REFERENCES user(id),
-        recipes_id INTEGER REFERENCES recipes(id),
+        recipes_id INTEGER,
+        FOREIGN KEY (recipes_id) REFERENCES recipes(id),
         content TEXT
     )
 
+    DROP TABLE IF EXISTS marks;
     CREATE TABLE marks(
         id SERIAL PRIMARY KEY,
-        user_id INTEGER REFERENCES user(id),
-        recipes_id INTEGER REFERENCES recipes(id),
+        user_id INTEGER
+        FOREIGN KEY user_id REFERENCES user(id),
+        recipes_id INTEGER,
+        FOREIGN KEY (recipes_id) REFERENCES recipes(id),
         value NUMERIC(3, 2),
     )
