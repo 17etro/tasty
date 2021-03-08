@@ -1,6 +1,6 @@
 require("dotenv").config();
 
-import { Pool } from "pg";
+const {Pool} = require("pg");
 
 const isProduction = process.env.NODE_ENV === "production";
 
