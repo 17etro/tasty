@@ -58,9 +58,7 @@ const Auth = (props) => {
 
     const onLogIn = () => {
         console.log(1);
-        axios.post(backendUrl + '/login', {
-            name: 'Petro'
-        })
+        axios.post(backendUrl + '/login', logInData)
         .then(res => {
             console.log(res);
         })
@@ -70,9 +68,7 @@ const Auth = (props) => {
     };
 
     const onSignUp = () => {
-        axios.post(backendUrl + '/signup', {
-            name: 'Petro'
-        })
+        axios.post(backendUrl + '/signup', signUpData)
         .then(res => {
             console.log(res);
         })

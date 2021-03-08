@@ -2,7 +2,7 @@
 
 require('dotenv/config');
 const http = require('http');
-const { POSTrouter, PUTrouter, GETrouter, DELETErouter } = require('./routes/routes');
+const Router = require('./routes/index');
 
 const server = http.createServer((req, res) => {
 
@@ -14,31 +14,9 @@ const server = http.createServer((req, res) => {
     "Access-Control-Allow-Credentials": false
   };
   res.writeHead(204, headers);
-
-  // methods
-  console.log(req.method);
-  switch (req.method) {
-    case "GET": {
-      console.log('get');
-      break;
-    }
-    case "POST": {
-      const url = req.url;
-      const func = POSTrouter[url];
-      func();
-      res.end('hello');
-      break;
-    }
-    case "DELETE": {
-      console.log('delete');
-      break;
-    }
-    case "PUT": {
-      console.log('put');
-      break;
-    }
-  };
-
+  const router = new Router(req.url, req.method);
+  console.log(req[0]);
+  router.usage(req, res);
 });
 
 server.listen(process.env.PORT, process.env.HOST, () => {
