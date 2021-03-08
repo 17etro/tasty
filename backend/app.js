@@ -3,8 +3,9 @@
 require('dotenv/config');
 const http = require('http');
 const Router = require('./routes/index');
+const  { pool } = require('./db/database.js')
 
-const server = http.createServer((req, res) => {
+const server = http.createServer(async (req, res) => {
 
   const headers = {
     'Access-Control-Allow-Origin': '*',
@@ -13,6 +14,8 @@ const server = http.createServer((req, res) => {
     "Access-Control-Allow-Headers": "X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept",
     "Access-Control-Allow-Credentials": false
   };
+  const result = await pool.query(`select * from users`).rows;
+  console.log(result);
   res.writeHead(204, headers);
   const router = new Router(req.url, req.method);
   router.usage(req, res);
