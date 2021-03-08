@@ -15,7 +15,6 @@ const server = http.createServer((req, res) => {
   };
   res.writeHead(204, headers);
   const router = new Router(req.url, req.method);
-  console.log(req[0]);
   router.usage(req, res);
 });
 
