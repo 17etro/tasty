@@ -57,7 +57,6 @@ const Auth = (props) => {
     }
 
     const onLogIn = () => {
-        console.log(1);
         axios.post(backendUrl + '/login', logInData)
         .then(res => {
             console.log(res);
