@@ -3,6 +3,7 @@
 require('dotenv/config');
 const http = require('http');
 const { pool } = require('./db/database');
+const User = require('./models/user');
 const Router = require('./routes/index');
 
 const server = http.createServer((req, res) => {
@@ -15,9 +16,7 @@ const server = http.createServer((req, res) => {
     "Access-Control-Allow-Credentials": false
   };
   res.writeHead(204, headers);
-  pool.query(`SELECT * FROM users`)
-    .then(res => console.log(res.rows))
-    .catch(console.log);
+  
   const router = new Router(req.url, req.method);
   router.usage(req, res);
 });
