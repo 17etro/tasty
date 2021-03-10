@@ -1,4 +1,5 @@
 const authR = require('./auth');
+const { headers } = require('../utils/headers/headers');
 
 class Router {
 
@@ -15,9 +16,8 @@ class Router {
         if (routes[url] && routes[url][method]) {
             routes[url][method](req, res);
         } else {
-            res.statusCode = 404;
-            res.write('Not Found');
-            res.end();
+            res.writeHead(404, headers);
+            res.end(JSON.stringify({message: 'Not Found'}));
         }
     }
 }
