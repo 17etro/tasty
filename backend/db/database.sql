@@ -1,7 +1,7 @@
     DROP DATABASE IF EXISTS tasty;
     CREATE  DATABASE tasty;
 
-    DROP TABLE IF EXISTS user;
+    DROP TABLE IF EXISTS users;
     CREATE TABLE users(
         id SERIAL PRIMARY KEY,
         name VARCHAR(255),
