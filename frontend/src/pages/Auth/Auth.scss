@@ -110,6 +110,19 @@
 	cursor: pointer;
 	transition: background-color, border-radius 0.2s linear;
 }
+.auth_container_body .disabled-submit {
+	width: 100%;
+	margin-top: 30px;
+	background-color: #eee;
+	border: none;
+	border-radius: 3px;
+	text-align: center;
+	padding: 15px 0;
+	color: #aaa;
+	font-size: 20px;
+	cursor: not-allowed;
+	transition: background-color, border-radius 0.2s linear;
+}
 .auth_container_body .submit:hover {
 	background-color: #870006;
 	border-radius: 20px;

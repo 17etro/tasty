@@ -2,7 +2,6 @@
 
 module.exports = function(value, rules) {
     let dataIsValid = true;
-
     const rightTypes = ["number", "string"];
     if (!rightTypes.includes(typeof value)) {
         return false;

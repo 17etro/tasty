@@ -3,7 +3,7 @@
 require('dotenv/config');
 const http = require('http');
 const { headers } = require('./utils/headers/headers');
-const Router = require('./routes/index');
+const Router = require('./routes/router');
 
 const server = http.createServer((req, res) => {
 
