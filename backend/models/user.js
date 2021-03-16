@@ -15,13 +15,23 @@ class User {
         return pool.query(command, [email]);
     }
     // methods
+  
+    //update user data
+    // update() {
+        
+    // }
+    //delete form database
+    delete() {
+        const { id } = this.info;
+        const command = 'DELETE FROM users WHERE id = $1';
+        const insertValues = [id];
+        return pool.query(command, insertValues);
+    }
 
-    // save new user to database
-    saveToDB() {
-        const { name, surname, email, password, salt } = this.info;
-        const command = 'INSERT INTO users( name, surname, email, password, salt ) VALUES($1, $2, $3, $4, $5)';
-        const insertValues = [name, surname, email, password, salt];
-
+    save() {
+        const { name, surname, email, password } = this.info;
+        const command = 'INSERT INTO users( name, surname, email, password ) VALUES($1, $2, $3, $4)';
+        const insertValues = [name, surname, email, password];
         return pool.query(command, insertValues);
     }
 }
