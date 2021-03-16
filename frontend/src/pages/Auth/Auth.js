@@ -114,7 +114,11 @@ const Auth = (props) => {
 							<div className="active-item">
 								<p>Вхід</p>
 							</div>
-							<div className="item" onClick={()=>onChangeMode('signup')}>
+							<div 
+                                id="item2"
+                                className="item" 
+                                onClick={()=>onChangeMode('signup')}
+                            >
 								<p>Реєстрація</p>
 							</div>
 						</div>
@@ -122,7 +126,8 @@ const Auth = (props) => {
                             value={logInData.email}
                             onChange={(e) => onChangeInput(e, 'login', 'email')}
                             placeholder="Електронна пошта" 
-                            type="text" 
+                            type="text"
+                            id="email1" 
                         />
 						<div className="input">
 							<input 
@@ -130,6 +135,7 @@ const Auth = (props) => {
                                 onChange={(e) => onChangeInput(e, 'login', 'password')}
                                 placeholder="Пароль" 
                                 type={showPass ? "text" : "password"} 
+                                id="pass1"
                             />
                             <div className="eye" onClick={onChangeShowPass}>
                                 <img src={showPass ? eyeOpen : eyeClosed} alt="" />
@@ -139,6 +145,7 @@ const Auth = (props) => {
 						<button 
                             onClick={onLogIn}
                             className="submit"
+                            id="submit1"
                         >
                             Ввійти
                         </button>
@@ -179,6 +186,7 @@ const Auth = (props) => {
                             onChange={(e) => onChangeInput(e, 'signup', 'email')}
                             placeholder="Електронна пошта" 
                             type="text" 
+                            id="email2"
                         />
 						<div className="input">
 							<input 
