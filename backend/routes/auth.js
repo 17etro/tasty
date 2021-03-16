@@ -1,4 +1,4 @@
-const { logIn, signUp } = require('../controllers/auth/index');
+const { logIn, signUp } = require('../controllers/auth/auth');
 
 const authRouter = {
     '/login': {
