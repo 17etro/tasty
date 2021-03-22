@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { backendUrl } from '../../config/config';
+import Spinner from '../../components/UI/Spinner/Spinner';
 
 import './Auth.scss';
 
@@ -27,7 +28,11 @@ const Auth = (props) => {
         secondPassword: ''
     });
 
+    const [ error, setError ] = useState(null);
+    const [ loading, setLoading ] = useState(false);
+
     const onChangeMode = (value) => {
+        setError(false);
         if (value === 'signup') {
             document.getElementById("register").style.left = "0px";
 	        document.getElementById("login").style.left = "-650px";
@@ -73,21 +78,34 @@ const Auth = (props) => {
     };
 
     const onSignUp = () => {
+        setError(null);
+        setLoading(true);
+
         axios.post(backendUrl + '/signup', signUpData)
         .then(res => {
             console.log(res);
+            setError(null);
+            setLoading(false);
         })
         .catch(err => {
-            console.log(err, err.response);
+            setError(err.response.data.message);
+            setLoading(false);
         });
     };
 
+    console.log(error, loading);
+
+    const emailConfirmes = signUpData.secondPassword.trim() === signUpData.password.trim();
+
     return (
         <div className="auth">
-				<div className="auth_container">
+			<div className="auth_container">
+            {loading && <Spinner />}
 
                     {/* LOGIN */}
 					<div id="login" className="auth_container_body">
+                    {!loading && 
+                    <>
 						<h1>Вітаємо вас</h1>
 						<img 
                             src={loginSvg}
@@ -97,7 +115,11 @@ const Auth = (props) => {
 							<div className="active-item">
 								<p>Вхід</p>
 							</div>
-							<div className="item" onClick={()=>onChangeMode('signup')}>
+							<div 
+                                id="item2"
+                                className="item" 
+                                onClick={()=>onChangeMode('signup')}
+                            >
 								<p>Реєстрація</p>
 							</div>
 						</div>
@@ -105,7 +127,8 @@ const Auth = (props) => {
                             value={logInData.email}
                             onChange={(e) => onChangeInput(e, 'login', 'email')}
                             placeholder="Електронна пошта" 
-                            type="text" 
+                            type="text"
+                            id="email1" 
                         />
 						<div className="input">
 							<input 
@@ -113,21 +136,27 @@ const Auth = (props) => {
                                 onChange={(e) => onChangeInput(e, 'login', 'password')}
                                 placeholder="Пароль" 
                                 type={showPass ? "text" : "password"} 
+                                id="pass1"
                             />
                             <div className="eye" onClick={onChangeShowPass}>
                                 <img src={showPass ? eyeOpen : eyeClosed} alt="" />
                             </div>
 						</div>
+                        {error && <p>{error}</p>}
 						<button 
                             onClick={onLogIn}
                             className="submit"
+                            id="submit1"
                         >
                             Ввійти
                         </button>
+                    </>}
 					</div>
 
 					{/* REGISTER */}
 					<div id="register" className="auth_container_body">
+                    {!loading && 
+                    <>
 						<h1>Вітаємо вас</h1>
 						<img 
                             src={registrSvg}
@@ -158,6 +187,7 @@ const Auth = (props) => {
                             onChange={(e) => onChangeInput(e, 'signup', 'email')}
                             placeholder="Електронна пошта" 
                             type="text" 
+                            id="email2"
                         />
 						<div className="input">
 							<input 
@@ -176,12 +206,14 @@ const Auth = (props) => {
                             placeholder="Підтвердіть пароль" 
                             type="password" 
                         />
+                        {error && <p>{error}</p>}
 						<button 
-                            onClick={onSignUp}
-                            className="submit"
+                            onClick={emailConfirmes ? onSignUp : ()=>{}}
+                            className={emailConfirmes ? "submit" : "disabled-submit"}
                         >
                             Зареєструватися
                         </button>
+                    </>}
 					</div>
 				</div>
 			</div>
