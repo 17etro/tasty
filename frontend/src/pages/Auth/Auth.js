@@ -57,13 +57,19 @@ const Auth = (props) => {
     }
 
     const onLogIn = () => {
-        axios.post(backendUrl + '/login', logInData)
-        .then(res => {
-            console.log(res);
-        })
-        .catch(err => {
-            console.log(err, err.response);
-        });
+        // setError(null);
+        // setLoading(true);
+
+        // axios.post(backendUrl + '/login', logInData)
+        // .then(res => {
+        //     console.log(res);
+        //     setLoading(false);
+        // })
+        // .catch(err => {
+        //     setError(err.response.data.message);
+        //     setLoading(false);
+        // });
+        props.history.push('/main');
     };
 
     const onSignUp = () => {
