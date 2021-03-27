@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
 // icons
 import recipe from '../../assets/images/Main/recipe.jpg';
 
-import './main.scss';
+import "./main.scss";
 
 const Main = (props) => {
     return (
