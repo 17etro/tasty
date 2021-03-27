@@ -48,109 +48,6 @@
         padding: 0 5px;
     }
     
-    .navbar {
-        overflow: hidden;
-        background-color: white;
-        color: #333;
-        height: 70px;
-    
-        .fa-user {
-            padding: 10px;
-            cursor: pointer;
-        }
-    
-        .fa-user:hover {
-            margin-top: 1px;
-            border-bottom: 1px solid rgb(150, 150, 150);
-        }
-    
-        .fa-bars {
-            padding: 10px;
-            margin-right: -5px;
-            margin-left: 20px;
-            cursor: pointer;
-        }
-    
-        .fa-bars:hover {
-            margin-top: 1px;
-            border-bottom: 1px solid rgb(150, 150, 150);
-        }
-    
-        ul {
-            display: flex;
-        }
-    
-        #searchBar {
-            height: 28px;
-            outline: none;
-            color: #333;
-            padding: 5px;
-            margin: 0 5px;
-            border: none;
-            border-radius: 5px;
-            box-shadow: 0 0 5px grey;
-        }
-    
-        #searchBar:hover {
-            box-shadow: 0 0 5px black;
-        }
-    
-        #search {
-            height: 28px;
-            position: relative;
-            background-color: transparent;
-            outline: none;
-            color: #333;
-            padding: 5px;
-            border-radius: 5px;
-            border: none;
-            top: -5px;
-            left: -5px;
-        }
-    
-        button {
-            background-color: rgb(209, 49, 49);
-            outline: none;
-            color: whitesmoke;
-            padding: 6px 20px;
-            margin: 0 5px;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-        }
-    
-        button:hover {
-            box-shadow: 0 0 1px grey;
-        }
-    
-        .flex {
-            overflow-y: hidden;
-            justify-content: space-between;
-        }
-    }
-    
-    .main-auth {
-        margin-right: 10px;
-        button {
-            border-radius: 0;
-            color: #333;
-            padding: 6px 5px;
-            margin: 0 -1px;
-            background-color: transparent;
-        }
-    
-        button:hover {
-            margin-top: 1px;
-            box-shadow: none;
-            border-bottom: 1px solid rgb(150, 150, 150);
-        }
-    
-        .divider {
-            width: 1px;
-            height: 19px;
-            background-color: #333;
-        }
-    }
     
     .fa-plus {
         margin-right: 10px;
@@ -161,21 +58,6 @@
         cursor: pointer;
         margin-top: -2px;
         width: 130px;
-    }
-    
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        overflow: hidden;
-        padding: 0 40px;
-    }
-    
-    .flex {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        overflow: hidden;
     }
 
     .showcase {
@@ -314,4 +196,19 @@
             width: auto;
         }
     }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0 40px;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
 }
