@@ -6,6 +6,7 @@ import Main from "./pages/Main/Main";
 import Wrapper from "./components/Wrapper/Wrapper";
 
 const App = () => {
+
   const unAuthRoutes = (
     <Switch>
       <Route path="/auth" render={(props) => <Auth {...props} />} />

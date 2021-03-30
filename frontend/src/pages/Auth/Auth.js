@@ -93,8 +93,6 @@ const Auth = (props) => {
         });
     };
 
-    console.log(error, loading);
-
     const emailConfirmes = signUpData.secondPassword.trim() === signUpData.password.trim();
 
     return (

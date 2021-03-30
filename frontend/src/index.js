@@ -1,13 +1,17 @@
-import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import ReactDOM from 'react-dom';
-import App from './App';
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import ReactDOM from "react-dom";
+import App from "./App";
+import { StateProvider } from "./context/provideContext";
 
-import './index.scss';
+import "./index.scss";
 
-ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
-  document.getElementById('root')
+const app = (
+  <StateProvider>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </StateProvider>
 );
+
+ReactDOM.render(app, document.getElementById("root"));
