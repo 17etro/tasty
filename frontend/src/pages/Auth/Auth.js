@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import useContext from '../../context/useContext';
+import * as actions from '../../context/actions/index';
 import axios from 'axios';
 import { backendUrl } from '../../config/config';
 import Spinner from '../../components/UI/Spinner/Spinner';
@@ -13,6 +15,7 @@ import eyeClosed from '../../assets/images/Auth/eyeClosed.svg';
 
 const Auth = (props) => {
 
+    const { dispatch } = useContext();
     const [ showPass, setShowPass ] = useState(false);
 
     const [ logInData, setLogInData ] = useState({
@@ -74,6 +77,7 @@ const Auth = (props) => {
         //     setError(err.response.data.message);
         //     setLoading(false);
         // });
+        dispatch(actions.successLogIn(null));
         props.history.push('/main');
     };
 
