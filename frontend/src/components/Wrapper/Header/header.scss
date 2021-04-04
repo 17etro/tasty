@@ -1,257 +1,279 @@
 .navbar {
-    overflow: hidden;
-    background-color: white;
-    color: #333;
-    height: 70px;
+	grid-area: navbar;
+	overflow: hidden;
+	background-color: white;
+	color: #333;
+	height: 60px;
 
-    a {
-        text-decoration: none;
-        color: #333;
-    }
-    
-    h1,
-    h2 {
-        font-weight: 300;
-        line-height: 1.2;
-        margin: 10px 0;
-    }
-    
-    p {
-        margin: 10px 0;
-    }
-    
-    img {
-        width: 100%;
-    }
+	.fa-bars {
+		padding: 10px;
+		cursor: pointer;
+	}
 
-    .main-auth {
-        margin-right: 10px;
-        button {
-            border-radius: 0;
-            color: #333;
-            padding: 6px 5px;
-            margin: 0 -1px;
-            background-color: transparent;
-        }
-    
-        button:hover {
-            margin-top: 1px;
-            box-shadow: none;
-            border-bottom: 1px solid rgb(150, 150, 150);
-        }
-    
-        .divider {
-            width: 1px;
-            height: 19px;
-            background-color: #333;
-        }
-    }
+	.fa-bars:hover {
+		margin-top: 1px;
+		border-bottom: 1px solid rgb(150, 150, 150);
+	}
 
-    .fa-user {
-        padding: 10px;
-        cursor: pointer;
-    }
+	.image {
+		cursor: pointer;
+		margin-top: -5px;
+		width: 130px;
+	}
 
-    .fa-user:hover {
-        margin-top: 1px;
-        border-bottom: 1px solid rgb(150, 150, 150);
-    }
+	#searchBar {
+		height: 28px;
+		outline: none;
+		color: #333;
+		padding: 5px;
+		margin: 0 5px;
+		border: none;
+		border-radius: 5px;
+		box-shadow: 0 0 5px grey;
 
-    .fa-bars {
-        padding: 10px;
-        margin-right: -5px;
-        margin-left: 20px;
-        cursor: pointer;
-    }
+		.fa-search {
+			float: right;
+			font-size: 20px;
+		}
+	}
 
-    .fa-bars:hover {
-        margin-top: 1px;
-        border-bottom: 1px solid rgb(150, 150, 150);
-    }
+	#searchBar:hover {
+		box-shadow: 0 0 5px black;
+	}
 
-    .fa-user {
-        cursor: pointer;
-        font-size: 20px;
-        padding: 0 5px;
-    }
-    
-    
-    .fa-plus {
-        margin-right: 10px;
-        margin-left: -9px;
-    }
-    
-    .image {
-        cursor: pointer;
-        margin-top: -2px;
-        width: 130px;
-    }
+	#search {
+		height: 28px;
+		position: relative;
+		background-color: transparent;
+		outline: none;
+		color: #333;
+		padding: 5px;
+		border-radius: 5px;
+		border: none;
+		top: -5px;
+		left: -5px;
+	}
 
+	.fa-plus {
+		margin-right: 7px;
+		margin-left: -9px;
+	}
 
-    ul {
-        display: flex;
-    }
-    ul {
-        margin-top: 3px;
-        list-style-type: none;
-        display: flex;
-    
-        li {
-            p {
-                margin: 5px 5px 25px 5px;
-                border-radius: 20px;
-                padding: 0 15px;
-                color: rgb(101, 191, 221);
-                cursor: pointer;
-                box-shadow: 0 0 5px rgb(185, 185, 185);
-            }
-    
-            p:hover {
-                color: rgb(30, 113, 141);
-                box-shadow: 0 0 5px rgb(104, 104, 104);
-            }
-        }
-    }
+	button {
+		min-width: fit-content;
+		background-color: rgb(209, 49, 49);
+		outline: none;
+		color: whitesmoke;
+		padding: 6px 20px;
+		margin: 0 5px;
+		border: none;
+		border-radius: 10px;
+		cursor: pointer;
+	}
 
-    #searchBar {
-        height: 28px;
-        outline: none;
-        color: #333;
-        padding: 5px;
-        margin: 0 5px;
-        border: none;
-        border-radius: 5px;
-        box-shadow: 0 0 5px grey;
-    }
+	button:hover {
+		box-shadow: 0 0 5px grey;
+	}
 
-    #searchBar:hover {
-        box-shadow: 0 0 5px black;
-    }
+	.main-auth {
+		min-width: fit-content;
 
-    #search {
-        height: 28px;
-        position: relative;
-        background-color: transparent;
-        outline: none;
-        color: #333;
-        padding: 5px;
-        border-radius: 5px;
-        border: none;
-        top: -5px;
-        left: -5px;
-    }
+		.fa-user {
+			padding: 10px;
+			cursor: pointer;
+		}
 
-    button {
-        background-color: rgb(209, 49, 49);
-        outline: none;
-        color: whitesmoke;
-        padding: 6px 20px;
-        margin: 0 5px;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-    }
+		.fa-user:hover {
+			margin-top: 1px;
+			border-bottom: 1px solid rgb(150, 150, 150);
+		}
 
-    button:hover {
-        box-shadow: 0 0 1px grey;
-    }
+		button {
+			font-size: 15px;
+			border-radius: 0;
+			color: #333;
+			padding: 6px 5px;
+			margin: 0 -1px;
+			background-color: transparent;
+		}
 
-    .flex {
-        overflow-y: hidden;
-        justify-content: space-between;
-    }
+		button:hover {
+			margin-top: 1px;
+			box-shadow: none;
+			border-bottom: 1px solid rgb(150, 150, 150);
+		}
+
+		.divider {
+			width: 1px;
+			height: 25px;
+			background-color: #333;
+		}
+	}
+
+	.flex {
+		justify-content: space-between;
+	}
 }
 
-@media only screen and (min-width: 450px) {
-    .navbar {
-        .container {
-            margin: 0 -10px;
-            padding: 0 0;
-        }
-    }
+@media only screen and (min-width: 1880px) {
+	.navbar {
+		.container {
+			margin: 0 auto;
+			padding: 0 40;
+		}
+	}
 
-    #searchBar {
-        width: 90px;
-    }
+	#searchBar {
+		width: 450px;
+	}
 
-    #search {
-        width: 60px;
-    }
+	#search {
+		width: 420px;
+	}
 
-    .image {
-        width: 100px;
-    }
+	.image {
+		width: 130px;
+	}
 
-    .hide {
-        visibility: hidden;
-        width: 0;
-    }
+	.hide {
+		display: block;
+		width: auto;
+	}
 }
 
-@media only screen and (min-width: 880px) {
-    .navbar {
-        .container {
-            margin: 0 auto;
-            padding: 0 40;
-        }
-    }
+@media only screen and (max-width: 1880px) {
+	.navbar {
+		.container {
+			margin: 0 auto;
+			padding: 0 40;
+		}
+	}
 
-    #searchBar {
-        min-width: 200px;
-        width: auto;
-    }
+	#searchBar {
+		width: 450px;
+	}
 
-    #search {
-        width: 200px;
-    }
+	#search {
+		width: 420px;
+	}
 
-    .image {
-        width: 130px;
-    }
+	.image {
+		width: 130px;
+	}
 
-    .hide {
-        visibility: visible;
-        width: auto;
-    }
+	.hide {
+		display: block;
+		width: auto;
+	}
 }
 
-@media only screen and (min-width: 1000px) {
-    .navbar {
-        .container {
-            margin: 0 auto;
-            padding: 0 40;
-        }
-    }
+@media only screen and (max-width: 1080px) {
+	.navbar {
+		.container {
+			background-color: white;
+			margin: 0 auto;
+			padding: 0 40;
+		}
+	}
 
-    #searchBar {
-        width: 350px;
-    }
+	#searchBar {
+		min-width: 200px;
+		width: auto;
+	}
 
-    #search {
-        width: 320px;
-    }
+	#search {
+		width: 200px;
+	}
 
-    .image {
-        width: 130px;
-    }
+	.image {
+		width: 130px;
+	}
 
-    .hide {
-        visibility: visible;
-        width: auto;
-    }
+	.hide {
+		display: block;
+		width: auto;
+	}
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    overflow: hidden;
-    padding: 0 40px;
+@media only screen and (max-width: 860px) {
+	.navbar {
+		.container {
+			background-color: white;
+			margin: 0 auto;
+			padding: 0 10px;
+		}
+	}
+
+	#searchBar {
+		min-width: 200px;
+		width: auto;
+	}
+
+	#search {
+		width: 200px;
+	}
+
+	.image {
+		width: 130px;
+	}
+
+	.hide {
+		display: none;
+		width: 0;
+	}
 }
 
-.flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    overflow: hidden;
+@media only screen and (max-width: 620px) {
+	.navbar {
+		.container {
+			margin: 0 auto;
+			padding: 0 10px;
+		}
+
+		.image {
+			margin-top: -3px;
+			width: 90px;
+		}
+	}
+
+	#searchBar {
+		min-width: 90px;
+		width: auto;
+	}
+
+	#search {
+		width: 60px;
+	}
+
+	.hide {
+		display: none;
+		width: 0;
+	}
+}
+@media only screen and (max-width: 400px) {
+	.navbar {
+		.container {
+			margin: 0 auto;
+			padding: 0 10px;
+		}
+
+		.image {
+			display: none;
+			width: 0px;
+		}
+	}
+
+	#searchBar {
+		min-width: 90px;
+		width: auto;
+	}
+
+	#search {
+		width: 60px;
+	}
+
+	.hide {
+		display: none;
+		width: 0;
+	}
 }

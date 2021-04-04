@@ -1,190 +1,139 @@
 .main {
-    ul {
-        margin-top: 3px;
-        list-style-type: none;
-        display: flex;
-        li {
-            p {
-                margin: 5px 5px 25px 5px;
-                border-radius: 20px;
-                padding: 0 15px;
-                color: rgb(101, 191, 221);
-                cursor: pointer;
-                box-shadow: 0 0 5px rgb(185, 185, 185);
-            }
-    
-            p:hover {
-                color: rgb(30, 113, 141);
-                box-shadow: 0 0 5px rgb(104, 104, 104);
-            }
-        }
-    }
-    a {
-        text-decoration: none;
-        color: #333;
-    }
-    h1,
-    h2 {
-        font-weight: 300;
-        line-height: 1.2;
-        margin: 10px 0;
-    }
-    p {
-        margin: 10px 0;
-    }
-    img {
-        width: 100%;
-    }
-    .fa-user {
-        cursor: pointer;
-        font-size: 20px;
-        padding: 0 5px;
-    }
-    .fa-plus {
-        margin-right: 10px;
-        margin-left: -9px;
-    }
-    .image {
-        cursor: pointer;
-        margin-top: -2px;
-        width: 130px;
-    }
-    .showcase {
-        background-color: #eeeeee;
-        color: #333;
-    }
-    .showcase .container {
-        max-width: 1400px;
-        padding-left: 80px;
-    }
-    .recipesTable {
-        display: grid;
-        gap: 4em;
-        grid-template-columns: repeat(auto-fit, minmax(267px, 1fr));
-    }
-    .recipesTable .recipe {
-        width: fit-content;
-        height: 200px;
-        width: fit-content;
-        background-color: white;
-        box-shadow: 0 0 5px #c2c2c2;
-    }
-    .recipesTable .recipe:hover {
-        box-shadow: 0 0 10px #7a7a7a;
-    }
-    .recipesTable .recipe .image {
-        margin-top: -1px;
-        border-bottom: 1px solid #c2c2c2;
-        height: 150px;
-        width: auto;
-        cursor: pointer;
-    }
-    .textField {
-        display: flex;
-        height: 51px;
-        margin-top: -7px;
-        .fa-user {
-            margin-top: 5px;
-            margin-left: 5px;
-        }
-        .nick {
-            margin-top: 5px;
-            margin-left: 2px;
-            font-size: 16px;
-            font-weight: bolder;
-        }
-        .description {
-            margin-top: 27px;
-            margin-left: -60px;
-            font-size: 14px;
-        }
-    }
-    @media only screen and (min-width: 450px) {
-        .navbar {
-            .container {
-                margin: 0 -10px;
-                padding: 0 0;
-            }
-        }
-        #searchBar {
-            width: 90px;
-        }
-        #search {
-            width: 60px;
-        }
-        .image {
-            width: 100px;
-        }
-        .hide {
-            visibility: hidden;
-            width: 0;
-        }
-    }
-    @media only screen and (min-width: 880px) {
-        .navbar {
-            .container {
-                margin: 0 auto;
-                padding: 0 40;
-            }
-        }
-    
-        #searchBar {
-            min-width: 200px;
-            width: auto;
-        }
-    
-        #search {
-            width: 200px;
-        }
-    
-        .image {
-            width: 130px;
-        }
-    
-        .hide {
-            visibility: visible;
-            width: auto;
-        }
-    }
-    
-    @media only screen and (min-width: 1000px) {
-        .navbar {
-            .container {
-                margin: 0 auto;
-                padding: 0 40;
-            }
-        }
-    
-        #searchBar {
-            width: 350px;
-        }
-    
-        #search {
-            width: 320px;
-        }
-    
-        .image {
-            width: 130px;
-        }
-    
-        .hide {
-            visibility: visible;
-            width: auto;
-        }
-    }
-}
+	background-color: #eeeeee;
+	display: grid;
+	grid-template-areas: "showcase" "footer";
+	grid-template-rows: 1fr 60px;
+	grid-template-columns: 1fr;
+	height: 100vh;
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    overflow: hidden;
-    padding: 0 40px;
-}
+	.showcase {
+		grid-area: showcase;
+		padding: 40px 0;
+		background-color: #eeeeee;
+		color: #333;
 
-.flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    overflow: hidden;
+		.recipesTable {
+			display: grid;
+			gap: 4em;
+			grid-template-columns: repeat(auto-fit, minmax(267px, 1fr));
+
+			.recipe {
+				align-self: center;
+				justify-self: center;
+				margin: 15px;
+				width: fit-content;
+				height: 200px;
+				width: fit-content;
+				background-color: white;
+				box-shadow: 0 0 5px #c2c2c2;
+				border-radius: 3px;
+
+				.image {
+					margin-top: -1px;
+					border-bottom: 1px solid #c2c2c2;
+					height: 150px;
+					width: auto;
+					cursor: pointer;
+					border-top-left-radius: 3px;
+					border-top-right-radius: 3px;
+				}
+
+				.field {
+					display: flex;
+					height: 51px;
+					margin-top: -7px;
+
+					.fa-user {
+						padding: 7px;
+					}
+
+					.nick {
+						margin-top: 3px;
+						font-size: 16px;
+						font-weight: bolder;
+					}
+
+					.description {
+						margin-top: 27px;
+						margin-left: -58px;
+						font-size: 14px;
+					}
+				}
+			}
+
+			.recipe:hover {
+				box-shadow: 0 0 10px #7a7a7a;
+			}
+		}
+	}
+
+	footer {
+		grid-area: footer;
+		background-color: white;
+
+		.page {
+			color: rgb(7, 7, 63);
+			margin: 0 5px;
+			padding: 10px;
+			cursor: pointer;
+		}
+
+		.page:hover {
+			color: rgb(53, 38, 255);
+		}
+	}
+
+	@media only screen and (min-width: 1880px) {
+		.showcase {
+			.recipesTable {
+				grid-template-columns: repeat(5, minmax(267px, 1fr));
+				margin: 0 100px;
+				gap: 4em;
+			}
+		}
+	}
+
+	@media only screen and (max-width: 1880px) {
+		.showcase {
+			.recipesTable {
+				margin: 0 50px;
+				gap: 4em;
+			}
+		}
+	}
+
+	@media only screen and (max-width: 1080px) {
+		.showcase {
+			.recipesTable {
+				margin: 0 50px;
+				gap: 4em;
+			}
+		}
+	}
+
+	@media only screen and (max-width: 860px) {
+		.showcase {
+			.recipesTable {
+				margin: 0 50px;
+				gap: 4em;
+			}
+		}
+	}
+
+	@media only screen and (max-width: 620px) {
+		.showcase {
+			.recipesTable {
+				margin: 0 50px;
+				gap: 4em;
+			}
+		}
+	}
+	@media only screen and (max-width: 400px) {
+		.showcase {
+			.recipesTable {
+				margin: 0 50px;
+				gap: 1em;
+			}
+		}
+	}
 }
