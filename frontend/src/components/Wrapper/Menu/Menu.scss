@@ -1,0 +1,312 @@
+.menu {
+	margin-top: -60px;
+	z-index: 10;
+	visibility: hidden;
+	position: fixed;
+	height: 100vh;
+	background-color: #eeeeee;
+	box-shadow: 0 0 5px grey;
+	opacity: 0;
+	transition: visibility 0.3s linear, opacity 0.3s linear;
+
+	.flex {
+		justify-content: flex-start;
+	}
+
+	.bar {
+		height: 60px;
+		background-color: white;
+		box-shadow: 0 0 5px grey;
+
+		.fa-times {
+			font-size: 20px;
+			padding: 10px;
+			margin: -4px 3px 0 10px;
+			cursor: pointer;
+		}
+
+		.fa-times:hover {
+			margin-top: -3px;
+			border-bottom: 1px solid rgb(150, 150, 150);
+		}
+	}
+
+	.sortBy {
+		margin: 0px auto;
+		width: 177px;
+		height: fit-content;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		.mainMenuElement {
+			p {
+				padding: 5px 10px;
+				font-size: 18px;
+				font-weight: 600;
+				user-select: none;
+			}
+		}
+
+		.menuElement {
+			width: 177px;
+			padding: 5px 10px;
+
+			.subMenuElement {
+				width: fit-content;
+				display: none;
+				padding: 2px 0;
+				margin-left: 5px;
+
+				p {
+					font-size: 16px;
+					font-weight: lighter;
+				}
+			}
+
+			p {
+				user-select: none;
+				font-size: 18px;
+				font-weight: 500;
+				user-select: none;
+				cursor: pointer;
+				width: fit-content;
+				padding: 3px 10px;
+			}
+
+			p:hover {
+				color: rgb(79, 68, 182);
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 3100px) {
+	.menu {
+		transform-origin: left top;
+		transform: scale(2.25);
+		width: calc(20% / 2.25);
+		height: calc(100% / 2.25);
+
+		.sortBy {
+			width: 85%;
+
+			.fa-ellipsis-h {
+				margin-top: 18.5px;
+			}
+
+			.mainMenuElement {
+				p {
+					font-size: 30px;
+				}
+			}
+
+			.menuElement {
+				width: 100%;
+				p {
+					font-size: 29px;
+				}
+
+				.subMenuElement {
+					margin-left: 35px;
+					p {
+						font-size: 28px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 3100px) {
+	.menu {
+		transform-origin: left top;
+		transform: scale(1.5);
+		width: calc(22% / 1.5);
+		height: calc(100% / 1.5);
+
+		.sortBy {
+			width: 85%;
+
+			.fa-ellipsis-h {
+				margin-top: 18.5px;
+			}
+
+			.mainMenuElement {
+				p {
+					font-size: 30px;
+				}
+			}
+
+			.menuElement {
+				width: 100%;
+				p {
+					font-size: 29px;
+				}
+
+				.subMenuElement {
+					margin-left: 35px;
+					p {
+						font-size: 28px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1920px) {
+	.menu {
+		transform-origin: left top;
+		transform: scale(1);
+		width: calc(20% / 1);
+		height: calc(100% / 1);
+
+		.sortBy {
+			width: 95%;
+
+			.fa-ellipsis-h {
+				margin-top: 13px;
+			}
+
+			.mainMenuElement {
+				p {
+					font-size: 22px;
+				}
+			}
+
+			.menuElement {
+				width: 100%;
+				p {
+					font-size: 21px;
+				}
+
+				.subMenuElement {
+					margin-left: 35px;
+					p {
+						font-size: 18px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1080px) {
+	.menu {
+		width: 24vw;
+		transform-origin: left top;
+		transform: scale(0.65);
+		width: calc(24% / 0.65);
+		height: calc(100% / 0.65);
+
+		.sortBy {
+			width: 190px;
+
+			.fa-ellipsis-h {
+				margin-top: 10px;
+			}
+
+			.mainMenuElement {
+				p {
+					font-size: 18px;
+				}
+			}
+
+			.menuElement {
+				width: 100%;
+				p {
+					font-size: 17px;
+				}
+
+				.subMenuElement {
+					margin-left: 35px;
+					p {
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 860px) {
+	.menu {
+		transform-origin: left top;
+		transform: scale(0.5);
+		width: calc(30% / 0.5);
+		height: calc(100% / 0.5);
+	}
+}
+
+@media only screen and (max-width: 620px) {
+	.menu {
+		transform-origin: left top;
+		transform: scale(0.4);
+		width: calc(100% / 0.4);
+		height: calc(100% / 0.4);
+
+		.sortBy {
+			width: 100vw;
+
+			.fa-ellipsis-h {
+				margin-top: 18.5px;
+			}
+
+			.mainMenuElement {
+				p {
+					font-size: 30px;
+				}
+			}
+
+			.menuElement {
+				width: 100vw;
+				p {
+					font-size: 29px;
+				}
+
+				.subMenuElement {
+					p {
+						font-size: 28px;
+					}
+				}
+			}
+		}
+	}
+}
+@media only screen and (max-width: 375px) {
+	.menu {
+		transform-origin: left top;
+		transform: scale(1);
+		width: calc(100% / 1);
+		height: calc(100% / 1);
+
+		.sortBy {
+			width: 100vw;
+
+			.fa-ellipsis-h {
+				margin-top: 18.5px;
+			}
+
+			.mainMenuElement {
+				p {
+					font-size: 30px;
+				}
+			}
+
+			.menuElement {
+				width: 100vw;
+				p {
+					font-size: 30px;
+				}
+
+				.subMenuElement {
+					p {
+						font-size: 28px;
+					}
+				}
+			}
+		}
+	}
+}
