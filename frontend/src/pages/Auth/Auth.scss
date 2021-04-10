@@ -15,9 +15,12 @@
 	padding: 80px 5px 5px 5px;
 	margin: 3% auto;
 	overflow: hidden;
+	border-radius: 5px;
+	box-shadow: 0 0 5px rgba(128, 128, 128, 0.582);
 }
 .auth_container {
 	width: 600px;
+	height: 750px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -139,4 +142,19 @@
 #register {
 	left: 650px;
 	top: -498px;
+}
+
+@media only screen and (min-width: 3800px) {
+}
+@media only screen and (max-width: 3800px) {
+}
+@media only screen and (max-width: 1920px) {
+}
+@media only screen and (max-width: 1080px) {
+}
+@media only screen and (max-width: 860px) {
+}
+@media only screen and (max-width: 620px) {
+}
+@media only screen and (max-width: 375px) {
 }

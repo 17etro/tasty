@@ -10,7 +10,7 @@ const Main = props => {
 		<div className="main">
 			{/* Showcase */}
 			<section className="showcase">
-				<div className="recipesTable">
+				<div id="showcase" className="recipesTable">
 					<div className="recipe">
 						<img className="image" src={recipe} alt="" />
 						<div className="field">
@@ -104,12 +104,33 @@ const Main = props => {
 				</div>
 			</section>
 			<footer>
-				<div className="flex">
-					<div className="page">1</div>
-					<div className="page">2</div>
-					<div className="page">3</div>
-					<div className="page">4</div>
-					<div className="page">5</div>
+				<div className="box">
+					<div className="previous">
+						<i class="fas fa-chevron-left"></i>
+					</div>
+					<div className="flex">
+						<div className="page active">
+							<p>1</p>
+						</div>
+						<div className="page">
+							<p>2</p>
+						</div>
+						<div className="page">
+							<p>3</p>
+						</div>
+						<div className="page">
+							<p>4</p>
+						</div>
+						<div className="page">
+							<p>5</p>
+						</div>
+						<div className="page">
+							<p>10</p>
+						</div>
+					</div>
+					<div className="next">
+						<i class="fas fa-chevron-right"></i>
+					</div>
 				</div>
 			</footer>
 		</div>
