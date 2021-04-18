@@ -17,7 +17,7 @@
 			gap: 4em;
 			grid-template-columns: repeat(auto-fit, minmax(267px, 1fr));
 
-			.recipe {
+			.card {
 				align-self: center;
 				justify-self: center;
 				margin: 15px;
@@ -48,20 +48,20 @@
 					}
 
 					.nick {
-						margin-top: 3px;
+						margin-top: 6px;
 						font-size: 16px;
 						font-weight: bolder;
 					}
 
 					.description {
 						margin-top: 27px;
-						margin-left: -58px;
+						margin-left: -50px;
 						font-size: 14px;
 					}
 				}
 			}
 
-			.recipe:hover {
+			.card:hover {
 				box-shadow: 0 0 10px #7a7a7a;
 			}
 		}
@@ -173,7 +173,7 @@
 				column-gap: 25em;
 				row-gap: 20em;
 
-				.recipe {
+				.card {
 					transform: scale(2.25);
 				}
 			}
@@ -196,7 +196,7 @@
 				column-gap: 5em;
 				row-gap: 4em;
 
-				.recipe {
+				.card {
 					transform: scale(1.15);
 				}
 			}
@@ -219,7 +219,7 @@
 				row-gap: 1em;
 				margin: 0 50px;
 
-				.recipe {
+				.card {
 					transform: scale(1);
 				}
 			}
@@ -242,7 +242,7 @@
 				row-gap: 1em;
 				margin: -30px 50px 0 50px;
 
-				.recipe {
+				.card {
 					transform: scale(0.9);
 				}
 			}
@@ -265,7 +265,7 @@
 				row-gap: 1em;
 				margin: -50px 50px 0 50px;
 
-				.recipe {
+				.card {
 					transform: scale(0.9);
 				}
 			}
@@ -288,7 +288,7 @@
 				row-gap: 1em;
 				margin: -85px 50px 0 50px;
 
-				.recipe {
+				.card {
 					transform: scale(0.8);
 				}
 			}
@@ -310,7 +310,7 @@
 				row-gap: 1em;
 				margin: -25px 50px 0 50px;
 
-				.recipe {
+				.card {
 					transform: scale(1);
 				}
 			}

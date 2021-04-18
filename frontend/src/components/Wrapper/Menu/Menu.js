@@ -27,25 +27,31 @@ const toShow = value => {
 const Menu = props => {
 	return (
 		<div id="menu" className="menu">
-			<div className="bar flex">
+			<div className="bar">
 				<i class="fal fa-times" onClick={() => toShow("menuHide")}></i>
-				{/* <div className="image">
-					<img src={logo} alt="Tasty" />
-				</div> */}
-			</div>
-			<div className="sortBy">
 				<div className="mainMenuElement">
 					<p>Сортувати за</p>
 				</div>
+			</div>
+			<div className="sortBy">
 				<div className="menuElement">
-					<p>Рейтингом</p>
+					<div className="con">
+						<p>Рейтингом</p>
+						<i class="far fa-chevron-right"></i>
+					</div>
 				</div>
 				<div className="menuElement">
-					<p>Популярністю</p>
+					<div className="con">
+						<p>Популярністю</p>
+						<i class="far fa-chevron-right"></i>
+					</div>
 				</div>
 				<div className="menuElement" onMouseLeave={() => toShow("categoryHide")}>
 					<div className="flex" onClick={() => toShow("categoryShow")}>
-						<p>Категорією ...</p>
+						<div className="con">
+							<p>Категорією</p>
+							<i class="far fa-ellipsis-h"></i>
+						</div>
 					</div>
 					<div id="category1" className="subMenuElement">
 						<p>Випічка</p>
@@ -56,7 +62,10 @@ const Menu = props => {
 				</div>
 				<div className="menuElement" onMouseLeave={() => toShow("tagHide")}>
 					<div className="flex" onClick={() => toShow("tagShow")}>
-						<p>Тегом ...</p>
+						<div className="con">
+							<p>Тегом</p>
+							<i class="far fa-ellipsis-h"></i>
+						</div>
 					</div>
 					<div id="tag1" className="subMenuElement">
 						<p>#Українська_кухня</p>

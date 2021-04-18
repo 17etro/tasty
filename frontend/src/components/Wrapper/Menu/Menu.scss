@@ -4,16 +4,15 @@
 	visibility: hidden;
 	position: fixed;
 	height: 100vh;
-	background-color: #eeeeee;
+	background-color: white;
 	box-shadow: 0 0 5px grey;
 	opacity: 0;
 	transition: visibility 0.3s linear, opacity 0.3s linear;
 
-	.flex {
-		justify-content: flex-start;
-	}
-
 	.bar {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 		height: 60px;
 		background-color: white;
 		box-shadow: 0 0 5px grey;
@@ -29,6 +28,20 @@
 			margin-top: -3px;
 			border-bottom: 1px solid rgb(150, 150, 150);
 		}
+
+		.mainMenuElement {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-right: 20px;
+			width: 100%;
+			p {
+				padding: 5px 10px;
+				font-size: 20px;
+				font-weight: 600;
+				user-select: none;
+			}
+		}
 	}
 
 	.sortBy {
@@ -40,18 +53,17 @@
 		align-items: center;
 		justify-content: center;
 
-		.mainMenuElement {
-			p {
-				padding: 5px 10px;
-				font-size: 18px;
-				font-weight: 600;
-				user-select: none;
-			}
-		}
-
 		.menuElement {
 			width: 177px;
 			padding: 5px 10px;
+			border-bottom: 1px solid gray;
+
+			.con {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
 
 			.subMenuElement {
 				width: fit-content;
@@ -78,6 +90,10 @@
 			p:hover {
 				color: rgb(79, 68, 182);
 			}
+
+			.con:hover {
+				color: rgb(79, 68, 182);
+			}
 		}
 	}
 }
@@ -90,7 +106,7 @@
 		height: calc(100% / 2.25);
 
 		.sortBy {
-			width: 85%;
+			width: 100%;
 
 			.fa-ellipsis-h {
 				margin-top: 18.5px;
@@ -127,7 +143,7 @@
 		height: calc(100% / 1.5);
 
 		.sortBy {
-			width: 85%;
+			width: 100%;
 
 			.fa-ellipsis-h {
 				margin-top: 18.5px;
@@ -164,7 +180,7 @@
 		height: calc(100% / 1);
 
 		.sortBy {
-			width: 95%;
+			width: 100%;
 
 			.fa-ellipsis-h {
 				margin-top: 13px;
@@ -202,7 +218,7 @@
 		height: calc(100% / 0.65);
 
 		.sortBy {
-			width: 190px;
+			width: 100%;
 
 			.fa-ellipsis-h {
 				margin-top: 10px;
@@ -248,7 +264,7 @@
 		height: calc(100% / 0.4);
 
 		.sortBy {
-			width: 100vw;
+			width: 100%;
 
 			.fa-ellipsis-h {
 				margin-top: 18.5px;
@@ -261,7 +277,7 @@
 			}
 
 			.menuElement {
-				width: 100vw;
+				width: 100%;
 				p {
 					font-size: 29px;
 				}
@@ -283,7 +299,7 @@
 		height: calc(100% / 1);
 
 		.sortBy {
-			width: 100vw;
+			width: 100%;
 
 			.fa-ellipsis-h {
 				margin-top: 18.5px;
@@ -296,7 +312,7 @@
 			}
 
 			.menuElement {
-				width: 100vw;
+				width: 100%;
 				p {
 					font-size: 30px;
 				}

@@ -11,7 +11,7 @@ const Main = props => {
 			{/* Showcase */}
 			<section className="showcase">
 				<div id="showcase" className="recipesTable">
-					<div className="recipe">
+					<div className="card">
 						<img className="image" src={recipe} alt="" />
 						<div className="field">
 							<div>
@@ -21,7 +21,7 @@ const Main = props => {
 							<p className="description">Description</p>
 						</div>
 					</div>
-					<div className="recipe">
+					<div className="card">
 						<img className="image" src={recipe} alt="" />
 						<div className="field">
 							<div>
@@ -31,7 +31,7 @@ const Main = props => {
 							<p className="description">Description</p>
 						</div>
 					</div>
-					<div className="recipe">
+					<div className="card">
 						<img className="image" src={recipe} alt="" />
 						<div className="field">
 							<div>
@@ -41,7 +41,7 @@ const Main = props => {
 							<p className="description">Description</p>
 						</div>
 					</div>
-					<div className="recipe">
+					<div className="card">
 						<img className="image" src={recipe} alt="" />
 						<div className="field">
 							<div>
@@ -51,7 +51,7 @@ const Main = props => {
 							<p className="description">Description</p>
 						</div>
 					</div>
-					<div className="recipe">
+					<div className="card">
 						<img className="image" src={recipe} alt="" />
 						<div className="field">
 							<div>
@@ -61,7 +61,7 @@ const Main = props => {
 							<p className="description">Description</p>
 						</div>
 					</div>
-					<div className="recipe">
+					<div className="card">
 						<img className="image" src={recipe} alt="" />
 						<div className="field">
 							<div>
@@ -71,7 +71,7 @@ const Main = props => {
 							<p className="description">Description</p>
 						</div>
 					</div>
-					<div className="recipe">
+					<div className="card">
 						<img className="image" src={recipe} alt="" />
 						<div className="field">
 							<div>
@@ -81,7 +81,7 @@ const Main = props => {
 							<p className="description">Description</p>
 						</div>
 					</div>
-					<div className="recipe">
+					<div className="card">
 						<img className="image" src={recipe} alt="" />
 						<div className="field">
 							<div>
@@ -91,7 +91,7 @@ const Main = props => {
 							<p className="description">Description</p>
 						</div>
 					</div>
-					<div className="recipe">
+					<div className="card">
 						<img className="image" src={recipe} alt="" />
 						<div className="field">
 							<div>
