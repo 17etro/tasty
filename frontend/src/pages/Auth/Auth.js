@@ -64,20 +64,20 @@ const Auth = props => {
 	};
 
 	const onLogIn = () => {
-		// setError(null);
-		// setLoading(true);
+		setError(null);
+		setLoading(true);
 
-		// axios.post(backendUrl + '/login', logInData)
-		// .then(res => {
-		//     console.log(res);
-		//     setLoading(false);
-		// })
-		// .catch(err => {
-		//     setError(err.response.data.message);
-		//     setLoading(false);
-		// });
-		dispatch(actions.successLogIn(null));
-		props.history.push("/main");
+		axios.post(backendUrl + '/login', logInData)
+		.then(res => {
+		    console.log(res);
+		    setLoading(false);
+		})
+		.catch(err => {
+		    setError(err.response.data.message);
+		    setLoading(false);
+		});
+		//dispatch(actions.successLogIn(null));
+		//props.history.push("/main");
 	};
 
 	const onSignUp = () => {

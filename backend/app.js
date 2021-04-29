@@ -10,6 +10,7 @@ const server = http.createServer((req, res) => {
   if (req.method === 'OPTIONS') {
     res.writeHead(204, headers);
     res.end();
+    return;
   }
 
   const router = new Router(req.url, req.method);

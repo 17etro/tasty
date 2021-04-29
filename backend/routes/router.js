@@ -13,6 +13,7 @@ class Router {
 
     usage(req, res) {
         const { url, method, routes } = this;
+        
         if (routes[url] && routes[url][method]) {
             routes[url][method](req, res);
         } else {
