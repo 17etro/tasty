@@ -1,13 +1,10 @@
-import * as actionTypes from '../actionTypes/actionTypes';
+import * as actionTypes from "../actionTypes/actionTypes";
 
-export const successLogIn = (data) => {
-    const newObj = {
-        token: '111',
-    };
-    localStorage.setItem('tasty_auth', JSON.stringify(newObj));
+export const successLogIn = (token) => {
+  localStorage.setItem("tasty_auth", JSON.stringify({ token }));
 
-    return {
-        type: actionTypes.SUCCESS_LOGIN,
-        //....
-    };
+  return {
+    type: actionTypes.SUCCESS_LOGIN,
+    token: token,
+  };
 };

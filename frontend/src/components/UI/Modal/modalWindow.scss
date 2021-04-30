@@ -1,0 +1,73 @@
+.modal-window-wrapper {
+    position: fixed;
+    background-color: rgba(23, 45, 76, 0.5);
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity .3s ease-out;
+
+    .modal-window {
+        position: relative;
+        min-width: 400px;
+        width: 50%;
+        max-width: 600px;
+        max-height: 600px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 3px;
+        box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.1);
+        opacity: 1;
+        transition: opacity .3s ease-out;
+    }
+
+    .modal-window-header {
+        padding-top: 10px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .modal-window-content {
+        margin-bottom: 30px;
+
+        p {
+            line-height: 20px;
+        }
+
+        .waiter-form-wrapper-button {
+            display: none;
+        }
+    }
+
+    .modal-window-footer {
+        display: flex;
+        justify-content: flex-end;
+
+        .cflow-button {
+            margin-left: 20px;
+        }
+    }
+
+    &.empty {
+        opacity: 0;
+        z-index: -1;
+
+        .cflow-modal-window {
+            opacity: 0;
+        }
+    }
+
+    .modal-window-btn-close {
+        border: none;
+        background: transparent;
+    }
+}
