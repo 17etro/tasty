@@ -190,7 +190,7 @@ const Auth = (props) => {
 
     try {
       const result = await login(logInData);
-      dispatch(actions.successLogIn(result.data.token));
+      dispatch(actions.successLogIn(result.data));
       return props.history.push("/main");
     } catch (err) {
       setError(

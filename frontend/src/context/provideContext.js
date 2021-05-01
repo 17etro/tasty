@@ -1,8 +1,11 @@
 import React, { createContext, useReducer } from "react";
 import * as actionTypes from "./actionTypes/actionTypes";
 
-const initialState = JSON.parse(localStorage.getItem("tasty_auth")) || {
-  token: null
+const initialState = {
+  token: localStorage.getItem("tasty_token") || null,
+  name: null,
+  surname: null,
+  email: null,
 };
 
 const storeContext = createContext(initialState);
@@ -12,7 +15,19 @@ const reducer = (state, action) => {
     case actionTypes.SUCCESS_LOGIN: {
       return {
         ...state,
+        name: action.name,
+        surname: action.surname,
+        email: action.email,
         token: action.token,
+      };
+    }
+    case actionTypes.ON_LOG_OUT: {
+      return {
+        ...state,
+        name: null,
+        surname: null,
+        email: null,
+        token: null,
       };
     }
     default:

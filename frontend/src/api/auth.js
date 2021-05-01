@@ -6,7 +6,7 @@ const signup = (signUpData) => service.post("/signup", signUpData);
 const getUserByToken = (token) =>
   service.get("/getUser", {
     headers: {
-      Authorization: `Bearer ${token}`,
+      Authorization: token,
     },
   });
 

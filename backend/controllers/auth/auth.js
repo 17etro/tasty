@@ -5,8 +5,10 @@ const jwt = require("jsonwebtoken");
 
 const User = require("../../models/user");
 const validate = require("../../utils/validation/validation");
+const getUserInfoByToken = require("../../utils/getUserInfoByToken");
 const { headers } = require("../../utils/headers/headers");
 
+// validation
 const rulesName = { required: true, maxLength: 255, minLength: 2 };
 const rulesSurname = { required: true, maxLength: 255, minLength: 3 };
 const rulesEmail = { required: true, isEmail: true, maxLength: 30 };
@@ -165,6 +167,8 @@ exports.logIn = (req, res) => {
         {
           email: userExist.rows[0].email,
           userId: userExist.rows[0].id,
+          name: userExist.rows[0].name,
+          surname: userExist.rows[0].surname,
         },
         process.env.jwt_secret_key,
         { expiresIn: 3600 }
@@ -172,12 +176,30 @@ exports.logIn = (req, res) => {
       res.writeHead(200, headers);
       return res.end(
         JSON.stringify({
+          token,
           userId: userExist.rows[0].id,
           name: userExist.rows[0].name,
           surname: userExist.rows[0].surname,
-          token: token,
         })
       );
+    }
+  });
+};
+
+exports.getUserInfo = (req, res) => {
+  let body = "";
+  req.on("data", (buffer) => {
+    body += buffer.toString();
+  });
+  req.on("end", async () => {
+    const token = req.headers["authorization"];
+    const userInfo = await getUserInfoByToken(token);
+    if (userInfo.message) {
+      res.writeHead(404, headers);
+      return res.end(JSON.stringify({ message: userInfo.message }));
+    } else {
+      res.writeHead(200, headers);
+      return res.end(JSON.stringify(userInfo));
     }
   });
 };
